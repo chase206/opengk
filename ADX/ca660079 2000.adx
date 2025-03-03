@@ -1,9 +1,9 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 02/20/2025 19:39:03 -->
+  <!-- Written 03/03/2025 19:27:48 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
-    <objectcount>163</objectcount>
+    <objectcount>164</objectcount>
     <userversion>v9.1</userversion>
     <author>dmg210</author>
     <desc>Values based on SIMK41 2mbit ECU.</desc>
@@ -679,7 +679,7 @@
   </ADXHISTOGRAM>
 
   <ADXLISTVIEW id="MAINLIST" idhash="0x7F6896CC" title="Main List">
-    <entrycount>69</entrycount>
+    <entrycount>71</entrycount>
     <ADXLVENTRY entrytype="1" flags="0x00000001" title="Digital Values" />
     <ADXLVENTRY entrytype="0" itemidhash="0x04E68707" />
     <ADXLVENTRY entrytype="0" itemidhash="0xCC8F46F2" />
@@ -709,6 +709,8 @@
     <ADXLVENTRY entrytype="0" itemidhash="0x0B7DBD7D" />
     <ADXLVENTRY entrytype="1" flags="0x00000001" title="Analog Values" />
     <ADXLVENTRY entrytype="0" itemidhash="0xB9608BD0" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD7B53DB" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xAF6A6CB9" />
     <ADXLVENTRY entrytype="0" itemidhash="0x02DAD760" />
     <ADXLVENTRY entrytype="0" itemidhash="0x1C453201" />
     <ADXLVENTRY entrytype="0" itemidhash="0x31EA45D3" />
@@ -2437,7 +2439,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="MAP" idhash="0xCD7B53DB" title="Manifold Absolute Pressure">
+  <ADXVALUE id="MAP" idhash="0xCD7B53DB" title="Manifold Absolute Pressure (psi)">
     <desc>reported in mbar &gt; converted to psi</desc>
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
@@ -2449,6 +2451,22 @@
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <MATH equation="(0.08291752498 * X) * 0.0145038">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="MAP2" idhash="0xAF6A6CB9" title="Manifold Absolute Pressure (hPa)">
+    <desc>Millibars = Hectopascals</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Manifold Absolute Pressure (hPa)</units>
+    <packetoffset>0x0E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="5434.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(0.08291752498 * X)">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
