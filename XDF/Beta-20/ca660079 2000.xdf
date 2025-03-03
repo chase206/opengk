@@ -1,4 +1,4 @@
-<!-- Written 03/02/2025 17:25:24 -->
+<!-- Written 03/03/2025 16:06:23 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -19,6 +19,20 @@
     <CATEGORY index="0x14" name="Sensor Definitions" />
     <CATEGORY index="0x2B" name="Identification" />
   </XDFHEADER>
+  <XDFFLAG uniqueid="0x2CDA">
+    <title>c_conf_cp_diag</title>
+    <description>Evaporative system diagnosis :&#013;&#010;C_CONF_DIAGCP = 0 Passive&#013;&#010;C_CONF_DIAGCP = 1 Active : single run per driving cycle&#013;&#010;C_CONF_DIAGCP = 2 Active : continuous run</description>
+    <CATEGORYMEM index="0" category="13" />
+    <EMBEDDEDDATA mmedaddress="0x810C" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <mask>0x01</mask>
+  </XDFFLAG>
+  <XDFFLAG uniqueid="0x5155">
+    <title>c_conf_vs</title>
+    <description>Vehicle speed acquisition :&#013;&#010;C_CONF_VS = 0 CONF_VS = GEAR_BOX Vehicle speed signal from gear box&#013;&#010;C_CONF_VS = 1 CONF_VS = ABS Vehicle speed signal from ABS control unit&#013;&#010;C_CONF_VS = 2 CONF_VS = TCU_CAN Vehicle speed signal from TCU via CAN</description>
+    <CATEGORYMEM index="0" category="13" />
+    <EMBEDDEDDATA mmedaddress="0x8113" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <mask>0x01</mask>
+  </XDFFLAG>
   <XDFTABLE uniqueid="0x666D" flags="0x0">
     <title>Calibration Version</title>
     <description>This should match the XDF file version.</description>
