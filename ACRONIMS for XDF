@@ -1,6 +1,7 @@
 known:
 ACC - air conditioner
 AJ - anti jerk
+COP - catalyst overheat protection
 DLY - delay
 EOI - end of injection (phase)
 ER - engine roughness
@@ -19,6 +20,7 @@ MAP - manifold absolute pressure
 N - engine speed [rpm]
 PL - part load 
 SOI - start of injection (phase)
+ST - start
 T - time
 TCO - coolant temperature
 TEG - exhaust gas temperature
@@ -33,8 +35,8 @@ WF - wall film
 WOT - wide open throttle
 WUP - warm-up
 under recognition:
-ASR
-AST
+ASR - 
+AST - 
 PU - 
 PUC - 
-ST
+
