@@ -1,0 +1,40 @@
+known:
+ACC - air conditioner
+AJ - anti jerk
+DLY - delay
+EOI - end of injection (phase)
+ER - engine roughness
+FIL - filter
+FRQ - frequiency 
+FL - full load
+IGA - ignition angle
+ISA - idle speed actuator
+ITC - integration time constant
+KNK - knock
+KNKWB - beginning of knock measurement
+KNKWE - end of knock measurement window
+LAM - lamda
+MAF - mass air flow
+MAP - manifold absolute pressure
+N - engine speed [rpm]
+PL - part load 
+SOI - start of injection (phase)
+T - time
+TCO - coolant temperature
+TEG - exhaust gas temperature
+THD - treshhold
+TI - ingection time
+TIA - intake air temperature
+TOIL - oil temperature
+TPS - throttle position sensor
+TQI - indicated engine torgue
+TQFR - engine friction torque
+WF - wall film
+WOT - wide open throttle
+WUP - warm-up
+under recognition:
+ASR
+AST
+PU - 
+PUC - 
+ST
