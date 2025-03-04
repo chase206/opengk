@@ -1,4 +1,4 @@
-<!-- Written 03/03/2025 19:29:18 -->
+<!-- Written 03/04/2025 12:51:26 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -339,6 +339,20 @@
     <description>Vehicle speed acquisition :&#013;&#010;C_CONF_VS = 0 CONF_VS = GEAR_BOX Vehicle speed signal from gear box&#013;&#010;C_CONF_VS = 1 CONF_VS = ABS Vehicle speed signal from ABS control unit&#013;&#010;C_CONF_VS = 2 CONF_VS = TCU_CAN Vehicle speed signal from TCU via CAN</description>
     <CATEGORYMEM index="0" category="13" />
     <EMBEDDEDDATA mmedaddress="0x8113" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <mask>0x01</mask>
+  </XDFFLAG>
+  <XDFFLAG uniqueid="0x5040">
+    <title>c_conf_lam</title>
+    <description>Oxygen sensor configuration :&#013;&#010;C_CONF_LAM = 0 Open loop&#013;&#010;C_CONF_LAM = 1 Lambda control</description>
+    <CATEGORYMEM index="0" category="13" />
+    <EMBEDDEDDATA mmedaddress="0x810F" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <mask>0x01</mask>
+  </XDFFLAG>
+  <XDFFLAG uniqueid="0x5F1">
+    <title>c_conf_cat_eff</title>
+    <description>Catalyst efficiency diagnosis :&#013;&#010;C_CONF_CAT_EFF = 0 Passive&#013;&#010;C_CONF_CAT_EFF = 1 Active</description>
+    <CATEGORYMEM index="0" category="13" />
+    <EMBEDDEDDATA mmedaddress="0x8109" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <mask>0x01</mask>
   </XDFFLAG>
   <XDFTABLE uniqueid="0x666D" flags="0x0">
