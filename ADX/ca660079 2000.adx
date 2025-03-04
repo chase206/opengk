@@ -1,10 +1,10 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 03/04/2025 13:05:20 -->
+  <!-- Written 03/04/2025 20:34:56 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
-    <objectcount>166</objectcount>
-    <userversion>v9.1</userversion>
+    <objectcount>167</objectcount>
+    <userversion>v9.2</userversion>
     <author>dmg210</author>
     <desc>Values based on SIMK41 2mbit ECU.</desc>
     <baud>10400</baud>
@@ -679,7 +679,7 @@
   </ADXHISTOGRAM>
 
   <ADXLISTVIEW id="MAINLIST" idhash="0x7F6896CC" title="Main List">
-    <entrycount>73</entrycount>
+    <entrycount>74</entrycount>
     <ADXLVENTRY entrytype="1" flags="0x00000001" title="Digital Values" />
     <ADXLVENTRY entrytype="0" itemidhash="0x04E68707" />
     <ADXLVENTRY entrytype="0" itemidhash="0xCC8F46F2" />
@@ -743,6 +743,7 @@
     <ADXLVENTRY entrytype="1" flags="0x00000001" title="ADC Values" />
     <ADXLVENTRY entrytype="0" itemidhash="0xAC3554B6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xFA0C1D75" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xA11C04B6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xE0A253C9" />
     <ADXLVENTRY entrytype="0" itemidhash="0x4F079255" />
     <ADXLVENTRY entrytype="0" itemidhash="0xD0502402" />
@@ -2626,7 +2627,7 @@
   </ADXVALUE>
 
   <ADXVALUE id="LAMBDA2SPA%" idhash="0xAC3554B6" title="Lambda - Spartan2">
-    <desc>lam_2&#013;&#010;confirmed 5v input accepted.&#013;&#010;14point7 Spartan 2 - AFR Conversion</desc>
+    <desc>lam_2&#013;&#010;confirmed 5v input accepted.&#013;&#010;AFR Conversion factor for 14point7 Spartan2</desc>
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Lambda Integrator - Bank 2 (AFR)</units>
@@ -2642,7 +2643,7 @@
   </ADXVALUE>
 
   <ADXVALUE id="LAMBDA2INNO%" idhash="0xFA0C1D75" title="Lambda - Innovate MTX">
-    <desc>lam_2&#013;&#010;confirmed 5v input accepted.&#013;&#010;AFR Conversion factor for&#013;&#010; Innovate Motorsports MTX-L-PLUS</desc>
+    <desc>lam_2&#013;&#010;confirmed 5v input accepted.&#013;&#010;AFR Conversion factor for Innovate Motorsports MTX-L-PLUS</desc>
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Lambda Integrator - Bank 2 (AFR)</units>
@@ -2653,6 +2654,22 @@
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <MATH equation="(0.0048828125*X) * 3.01 + 7.35">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LAMBDA2AEM%" idhash="0xA11C04B6" title="Lambda - AEM UEGO X-Series">
+    <desc>lam_2&#013;&#010;confirmed 5v input accepted.&#013;&#010;AFR Conversion factor for AEM UEGO X-Series</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Lambda Integrator - Bank 2 (AFR)</units>
+    <packetoffset>0x1D</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="8.500000" high="18.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(0.0048828125*X) * 2.3750 + 7.3125">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
